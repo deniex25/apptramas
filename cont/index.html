@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/estilo.css') }}"
+    />
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <title>Descarga de archivos TXT para SuSalud</title>
+  </head>
+  <body>
+    <header>
+      <div class="banner">
+        <img
+          src="{{ url_for('static', filename='img/logo.png') }}"
+          alt="Logo Izquierda"
+          class="logo-izquierda"
+        />
+        <div class="texto-centro">
+          <h1 class="blanquear">Descarga de archivos para SuSalud</h1>
+        </div>
+        <img
+          src="{{ url_for('static', filename='img/logo_susalud.png') }}"
+          alt="Logo Derecha"
+          class="logo-derecha"
+        />
+      </div>
+    </header>
+    <div class="contenedor">
+      <form id="myForm" method="POST" enctype="multipart/form-data">
+        <fieldset id="fieldset1">
+          <legend>Opciones de filtro</legend>
+          <div class="select-container">
+            <select id="microred" class="form-select" name="microred">
+              <option value="" disabled selected>Microred</option>
+              <option value="florencia de mora">Florencia de Mora</option>
+              <option value="huanchaco">Huanchaco</option>
+              <option value="la esperanza">La Esperanza</option>
+              <option value="laredo">Laredo</option>
+              <option value="moche">Moche</option>
+              <option value="porvenir">El Porvenir</option>
+              <option value="salaverry">Salaverry</option>
+              <option value="trujillo - metropolitano">Trujillo</option>
+              <option value="victor larco">Victor Larco</option>
+            </select>
+
+            <select id="mes" class="form-select" name="mes">
+              <option value="" disabled selected>Mes</option>
+              <option value="1">Enero</option>
+              <option value="2">Febrero</option>
+              <option value="3">Marzo</option>
+              <option value="4">Abril</option>
+              <option value="5">Mayo</option>
+              <option value="6">Junio</option>
+              <option value="7">Julio</option>
+              <option value="8">Agosto</option>
+              <option value="9">Septiembre</option>
+              <option value="10">Octubre</option>
+              <option value="11">Noviembre</option>
+              <option value="12">Diciembre</option>
+            </select>
+
+            <select id="anio" class="form-select" name="anio">
+              <option value="" disabled selected>Año</option>
+              <option value="2025">2025</option>
+            </select>
+          </div>
+        </fieldset>
+
+        <fieldset id="fieldset2">
+          <legend>Descarga de Tramas</legend>
+          <div class="contenedor-tabla">
+            <div class="item">
+              <input
+                name="chktrama1"
+                id="chktrama1"
+                class="form-check-input"
+                type="checkbox"
+              />
+              <label for="miArchivo1">Descargar trama A0</label>
+            </div>
+            <div class="item">
+              <input
+                name="chktrama2"
+                id="chktrama2"
+                class="form-check-input"
+                type="checkbox"
+              />
+              <label>Descargar trama B1</label>
+            </div>
+            <div class="item">
+              <input
+                name="chktrama3"
+                id="chktrama3"
+                class="form-check-input"
+                type="checkbox"
+              />
+              <label for="miArchivo3">Descargar trama B2</label>
+            </div>
+            <div class="item">
+              <input
+                name="chktrama4"
+                id="chktrama4"
+                class="form-check-input"
+                type="checkbox"
+              />
+              <label for="miArchivo4">Descargar trama C1</label>
+            </div>
+            <div class="item">
+              <input
+                name="chktrama5"
+                id="chktrama5"
+                class="form-check-input"
+                type="checkbox"
+              />
+              <label for="miArchivo5">Descargar trama C2</label>
+            </div>
+            <div class="item">
+              <input
+                name="chktrama6"
+                id="chktrama6"
+                class="form-check-input"
+                type="checkbox"
+              />
+              <label for="miArchivo6">Descargar trama D1</label>
+            </div>
+            <div class="item">
+              <input
+                name="chktrama7"
+                id="chktrama7"
+                class="form-check-input"
+                type="checkbox"
+              />
+              <label for="miArchivo7">Descargar trama D2</label>
+            </div>
+            <div class="item">
+              <input
+                name="chktrama8"
+                id="chktrama8"
+                class="form-check-input"
+                type="checkbox"
+              />
+              <label for="miArchivo8">Descargar trama E0</label>
+            </div>
+            <div class="item">
+              <input
+                name="chktrama9"
+                id="chktrama9"
+                class="form-check-input"
+                type="checkbox"
+              />
+              <label for="miArchivo9">Descargar trama F0</label>
+            </div>
+            <div class="item">
+              <input
+                name="chktrama10"
+                id="chktrama10"
+                class="form-check-input"
+                type="checkbox"
+              />
+              <label for="miArchivo10">Descargar trama G0</label>
+            </div>
+            <div class="item">
+              <input
+                name="chktrama11"
+                id="chktrama11"
+                class="form-check-input"
+                type="checkbox"
+              />
+              <label for="miArchivo11">Descargar trama H0</label>
+            </div>
+            <div class="item">
+              <input
+                name="chktrama12"
+                id="chktrama12"
+                class="form-check-input"
+                type="checkbox"
+              />
+              <label for="miArchivo12">Descargar trama I0</label>
+            </div>
+            <div class="item">
+              <input
+                name="chktrama13"
+                id="chktrama13"
+                class="form-check-input"
+                type="checkbox"
+              />
+              <label for="miArchivo13">Descargar trama J0</label>
+            </div>
+          </div>
+        </fieldset>
+        <div class="d-flex justify-content-center align-items-center">
+          <div
+            id="errorMessage"
+            class="alert alert-danger"
+            style="display: none"
+          ></div>
+          <div class="select-container botones">
+            <button
+              class="btn btn-primary rem-1 rem-2"
+              type="button"
+              onclick="selecTodos()"
+            >
+              Seleccionar Todos
+            </button>
+            <button
+              class="btn btn-primary rem-1 rem-2"
+              type="submit"
+              onclick="validarForm()"
+            >
+              Descargar
+            </button>
+            <button
+              class="btn btn-primary rem-1 rem-2"
+              type="button"
+              onclick="document.getElementById('myForm').reset();"
+            >
+              Limpiar
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
